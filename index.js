@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 // Index route
 app.get('/', function (req, res) {
-    res.send('Hello world, I am the chat bot around')
+    res.send('Hello world, I am the best chat bot')
 })
 
 // for Facebook verification
@@ -43,7 +43,7 @@ app.post('/webhook/', function (req, res) {
 })
 
 //<PAGE_ACCESS_TOKEN>
-var token = "hi there"
+var token = "CAAY98J5R0d0BALGMyiFaQZAlnn3aZAu09pVfkN0fwO9JtvqyZCe5ZCYeGDvVcXFpBHaT0SZCfyHDqNmvCNOwmT2uSchRDFM6f87Vr8OFOFvs54BcZBG0XZA4w69UXZA52A52cjGGOfBVGWHJRHI64CaK8s46ZCc6lfmI1KDhwdvACGLZA5Yy7YRmWCNZCfTwjqciH4ZD"
 
 function sendTextMessage(sender, text) {
     messageData = {
@@ -65,6 +65,56 @@ function sendTextMessage(sender, text) {
         }
     })
 }
+function sendGenericMessage(sender) {
+    messageData = {
+        "attachment": {
+            "type": "template",
+            "payload": {
+                "template_type": "generic",
+                "elements": [{
+                    "title": "First card",
+                    "subtitle": "Element #1 of an hscroll",
+                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "buttons": [{
+                        "type": "web_url",
+                        "url": "https://www.messenger.com",
+                        "title": "web url"
+                    }, {
+                        "type": "postback",
+                        "title": "Postback",
+                        "payload": "Payload for first element in a generic bubble",
+                    }],
+                }, {
+                    "title": "Second card",
+                    "subtitle": "Element #2 of an hscroll",
+                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "Postback",
+                        "payload": "Payload for second element in a generic bubble",
+                    }],
+                }]
+            }
+        }
+    }
+    request({
+        url: 'https://graph.facebook.com/v2.6/me/messages',
+        qs: {access_token:token},
+        method: 'POST',
+        json: {
+            recipient: {id:sender},
+            message: messageData,
+        }
+    }, function(error, response, body) {
+        if (error) {
+            console.log('Error sending messages: ', error)
+        } else if (response.body.error) {
+            console.log('Error: ', response.body.error)
+        }
+    })
+}
+
+
 
 
 
