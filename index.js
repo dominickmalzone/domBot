@@ -47,7 +47,7 @@ app.post('/webhook/', function (req, res) {
 })
 
 //<PAGE_ACCESS_TOKEN>
-var token = "CAAY98J5R0d0BALGMyiFaQZAlnn3aZAu09pVfkN0fwO9JtvqyZCe5ZCYeGDvVcXFpBHaT0SZCfyHDqNmvCNOwmT2uSchRDFM6f87Vr8OFOFvs54BcZBG0XZA4w69UXZA52A52cjGGOfBVGWHJRHI64CaK8s46ZCc6lfmI1KDhwdvACGLZA5Yy7YRmWCNZCfTwjqciH4ZD"
+var token = "token"
 
 function sendTextMessage(sender, text) {
     messageData = {
