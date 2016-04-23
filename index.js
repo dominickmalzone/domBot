@@ -84,9 +84,9 @@ function sendDomMessage(sender) {
                         "url": "http://www.Dominickmalzone.com",
                         "title": "His Site"
                     }, {
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for first element in a generic bubble",
+                        "type": "web_url",
+                        "url": "http://www.Dominickmalzone.com/fb",
+                        "title": "Resume for FB"
                     }],
                 }, {
                     "title": "What does he build",
