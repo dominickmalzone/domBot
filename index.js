@@ -87,6 +87,15 @@ function sendDomMessage(sender) {
                         "title": "Postback",
                         "payload": "Payload for first element in a generic bubble",
                     }],
+                }, {
+                    "title": "He built this cool bot",
+                    "subtitle": "And many more apps! Check out his stie",
+                    "image_url": "https://i.gyazo.com/ff15b191d1f1b5645cdbe53c25721a12.gif",
+                    "buttons": [{
+                        "type": "postback",
+                        "title": "Postback",
+                        "payload": "Payload for second element in a generic bubble",
+                    }],
                 }]
             }
         }
