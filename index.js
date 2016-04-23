@@ -81,15 +81,15 @@ function sendDomMessage(sender) {
                     "image_url": "https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xfp1/v/t1.0-9/12743953_1128716870474552_2495718489447962368_n.jpg?oh=b5c7761e864501dd719524b7e0bd0fe4&oe=577770C3",
                     "buttons": [{
                         "type": "His Site",
-                        "url": "http://www.Dominickmalzone.com"
+                        "url": "http://www.Dominickmalzone.com",
                     }, {
                         "type": "postback",
                         "title": "Postback",
                         "payload": "Payload for first element in a generic bubble",
                     }],
                 }, {
-                    "title": "He built this cool bot",
-                    "subtitle": "And many more apps! Check out his stie",
+                    "title": "What does he build",
+                    "subtitle": "Web, mobile and much more",
                     "image_url": "https://i.gyazo.com/ff15b191d1f1b5645cdbe53c25721a12.gif",
                     "buttons": [{
                         "type": "postback",
