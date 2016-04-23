@@ -80,8 +80,9 @@ function sendDomMessage(sender) {
                     "subtitle": "He likes building cool stuff!",
                     "image_url": "https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xfp1/v/t1.0-9/12743953_1128716870474552_2495718489447962368_n.jpg?oh=b5c7761e864501dd719524b7e0bd0fe4&oe=577770C3",
                     "buttons": [{
-                        "type": "His Site",
+                        "type": "web_url",
                         "url": "http://www.Dominickmalzone.com",
+                        "title": "His Site"
                     }, {
                         "type": "postback",
                         "title": "Postback",
