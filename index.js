@@ -74,7 +74,7 @@ function sendDomMessage(sender) {
         "attachment": {
             "type": "template",
             "payload": {
-                "template_type": "dom",
+                "template_type": "generic",
                 "elements": [{
                     "title": "Dominick Malzone",
                     "subtitle": "He likes building cool stuff!",
