@@ -36,18 +36,18 @@ app.post('/webhook/', function (req, res) {
         sender = event.sender.id
         if (event.message && event.message.text) {
             text = event.message.text
-            if (text === 'Generic') {
-                sendGenericMessage(sender)
+            if (text === 'dom') {
+                sendDomMessage(sender)
                 continue
             }
-            sendTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+            sendTextMessage(sender, "I feel like repeating what you said... " + text.substring(0, 200))
         }
     }
     res.sendStatus(200)
 })
 
 //<PAGE_ACCESS_TOKEN>
-var token = "token"
+var token = "CAAY98J5R0d0BALGMyiFaQZAlnn3aZAu09pVfkN0fwO9JtvqyZCe5ZCYeGDvVcXFpBHaT0SZCfyHDqNmvCNOwmT2uSchRDFM6f87Vr8OFOFvs54BcZBG0XZA4w69UXZA52A52cjGGOfBVGWHJRHI64CaK8s46ZCc6lfmI1KDhwdvACGLZA5Yy7YRmWCNZCfTwjqciH4ZD"
 
 function sendTextMessage(sender, text) {
     messageData = {
@@ -69,33 +69,23 @@ function sendTextMessage(sender, text) {
         }
     })
 }
-function sendGenericMessage(sender) {
+function sendDomMessage(sender) {
     messageData = {
         "attachment": {
             "type": "template",
             "payload": {
-                "template_type": "generic",
+                "template_type": "dom",
                 "elements": [{
-                    "title": "First card",
-                    "subtitle": "Element #1 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                    "title": "Dominick Malzone",
+                    "subtitle": "He likes building cool stuff!",
+                    "image_url": "https://scontent.fsnc1-1.fna.fbcdn.net/hphotos-xfp1/v/t1.0-9/12743953_1128716870474552_2495718489447962368_n.jpg?oh=b5c7761e864501dd719524b7e0bd0fe4&oe=577770C3",
                     "buttons": [{
-                        "type": "web_url",
-                        "url": "https://www.messenger.com",
-                        "title": "web url"
+                        "type": "His Site",
+                        "url": "http://www.Dominickmalzone.com"
                     }, {
                         "type": "postback",
                         "title": "Postback",
                         "payload": "Payload for first element in a generic bubble",
-                    }],
-                }, {
-                    "title": "Second card",
-                    "subtitle": "Element #2 of an hscroll",
-                    "image_url": "http://messengerdemo.parseapp.com/img/gearvr.png",
-                    "buttons": [{
-                        "type": "postback",
-                        "title": "Postback",
-                        "payload": "Payload for second element in a generic bubble",
                     }],
                 }]
             }
